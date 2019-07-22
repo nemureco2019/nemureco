@@ -1,0 +1,89 @@
+
+#set("content") {
+
+<div class="container">
+    <br>
+  <div class="row">
+      <div class="col-3">
+            <h5>#(user.id)</h5>
+       <div class="row">
+      
+        <a href="/sleepin/#(user.id)" class="btn btn-primary">A</a>
+        <a href="/weakas/#(user.id)" class="btn btn-danger">B</a>
+        <a href="/indes/#(user.id)" class="btn btn-warning">C</a>
+        <a href="/assleep/#(user.id)" class="btn btn-info">D</a>
+         
+        </div>
+      <br>
+       <table class="table table-bordered table-hover">
+           <thead class="thead-light">
+               <tr>
+                   <th>管理ID</th>
+                   
+               </tr>
+               <tbody>
+                   #for(users in users) {
+                   <tr>
+                       
+                       <td><a href="/detail/#(users.id)">#(users.name)</a></td>
+                    
+                   </tr>
+                   
+                   }
+                   
+               </tbody>
+               
+               
+               
+           </thead>
+           
+           
+           </form>
+       </table>
+    </div>
+      
+   <div class="col-9">
+       
+            <a id="download" href="#" download="#(user.name).csv" onclick="handleDownload()">CSV作成</a>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>年月</th>
+                <th>日</th>
+                <th>曜日</th>
+           
+                <th>入眠基準の月</th>
+            </tr>
+            <tbody>
+                #for(sleepData in sleepData) {
+                <tr>
+                    
+                    <td>#(sleepData.year)年#(sleepData.month)月</td>
+                    <td>#(sleepData.dayTime)日</td>
+                    <td>#(sleepData.week)曜日</td>
+                 
+                    <td><a href="/search/#(user.id)search?term=#(sleepData.carender)">#(sleepData.carender)</a></td>
+                </tr>
+                
+                }
+                
+            </tbody>
+        </thead>
+        
+        
+        </form>
+    </table>
+ 
+ #embed("dl")
+ 
+ 
+    </div>
+ 
+</div>
+  
+</div>
+
+
+
+}
+#embed("base2")

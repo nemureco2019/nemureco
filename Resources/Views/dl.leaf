@@ -1,0 +1,28 @@
+
+<script type='text/javascript'>
+    function handleDownload() {
+        var bom = new Uint8Array([0xEF, 0xBB, 0xBF]);
+        var content = ["","MesDay","お迎え時間","Month","Day","DoW","Fgot","Bfast(cm)","Sawake(kg)","Dfct","Comment0","夜泣","Comment1","Comment2","Comment3","Tm01(1Male2Female)","Tp01","Tm02","UserID","\n",
+
+"","#(user.firstDate)","#(user.month)","#(user.dayTime)","#(user.birthday)","#(user.name)","#(user.height)","#(user.weight)","","","夜泣(時刻)","","","","#(user.gender)","","","","\n"];
+        var id = 0;
+        
+        #for(sleepData in sleepData){
+            
+            content.push(id+=1,"#(sleepData.csv)","\n",id+=1,"#(sleepData.weak3)","\n")
+            
+        }
+        
+        
+        var blob = new Blob([ bom, content ], { "type" : "text/csv" });
+        
+        if (window.navigator.msSaveBlob) {
+            window.navigator.msSaveBlob(blob, "#(user.username).csv");
+            
+            // msSaveOrOpenBlobの場合はファイルを保存せずに開ける
+            window.navigator.msSaveOrOpenBlob(blob, "#(user.username).csv");
+        } else {
+            document.getElementById("download").href = window.URL.createObjectURL(blob);
+        }
+    }
+</script>

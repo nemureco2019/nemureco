@@ -1,0 +1,32 @@
+
+
+#set("content") {
+
+<div class="container">
+    <br>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>項目</th>
+                
+        
+             </tr>
+</thead>
+            <tbody>
+
+                
+<tr>
+<th><a href="/user">ユーザーリスト</a></th>
+
+</tr>
+            </tbody>
+    <tr>
+        <th><a href="/datacsv">睡眠データ全件のCSV作成へ</a></th>
+            
+        </tr>
+    
+    </table>
+</div>
+}
+
+#embed("base2")

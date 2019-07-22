@@ -1,0 +1,49 @@
+#set("content") {
+<div class=container>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!--Chart描画のScript -->
+ <script type="text/javascript">
+ google.charts.load("current",#embed("chartPackages"));
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        
+        var container = document.getElementById('example5.1');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+
+        dataTable.addColumn(#embed("chartColumn1"));
+        dataTable.addColumn(#embed("chartcolumn2"));
+        dataTable.addColumn(#embed("chartcolumn3"));
+       
+        dataTable.addRows([
+                           
+                           [ 'ユーザーの睡眠時間',
+                            new Date(2019,6,6,00,00,0), new Date(2019,6,6,24,0,0) ],
+                           
+                           [ '2019/06/06',
+                            new Date(2019,6,6,10,30,0), new Date(2019,6,6,14,0,0) ],
+                           
+                           [ '2019/06/06',
+                            new Date(2019,6,6,16,30,0), new Date(2019,6,6,18,0,0) ],
+                           [ '2019/06/06',
+                            new Date(2019,6,6,20,30,0), new Date(2019,6,7,7,0,0) ]
+                           
+                           ]
+                          );
+                          var options = #embed("chartTimeLine.leaf")
+ 
+
+ 
+ </script>
+    
+
+<br>
+    <div id="col-10">
+<div id="example5.1" ></div>
+
+    </div>
+    
+</div>
+}
+
+#embed("base2")

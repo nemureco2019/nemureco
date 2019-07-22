@@ -1,0 +1,30 @@
+
+#set("content") {
+<div class=container>
+<h1>#(title)</h1>
+
+
+<form method="post">
+<div class="form-group">
+<label for="username">ID</label>
+<input type="text" name="username" class="form-control"
+id="username"/>
+</div>
+
+<div class="form-group">
+<label for="password">Password</label>
+<input type="password" name="password" class="form-control"
+id="password"/>
+</div>
+
+<button type="submit" class="btn btn-primary">Log In</button>
+</form>
+<br>
+<!--
+<h5>アカウントをお持ちで無い方</h5>
+<input type="button" onclick="location.href='/register' "value="サービスに申し込みを行う">
+-->
+</div>
+}
+
+#embed("base2")

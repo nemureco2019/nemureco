@@ -1,0 +1,12 @@
+<p>
+<script>
+var csv1 = ["お迎え時間","Month","Day","DoW","Fgot","Bfast(cm)","Sawake(kg)","Dfct","Comment0","Comment1","Comment2","Comment3","Tm0(1Male2Female)","Tp01","Tm01","Tm02","\n",
+"","","","#(user.birthday)","#(user.id)","#(user.height)","#(user.weight)","","","","","","","","","","","夜泣(時刻)","","","","","#(user.gender)","","","","\n"];
+  #for(sleepData in sleepData){
+
+csv1.push("#(sleepData.csv)")
+
+}
+document.write(csv1);
+</script>
+</p>

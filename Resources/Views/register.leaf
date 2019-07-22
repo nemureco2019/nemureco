@@ -1,0 +1,66 @@
+
+#set("content") {
+<div class="container">
+<h1>#(title)</h1>
+
+#if(registrationError) {
+<div class="alert alert-danger" role="alert">
+There were errors in the form. Please ensure you enter all details correctly.
+</div>
+}
+
+<form method="post">
+<div class="form-group">
+<label for="name">Name</label>
+<input type="text" name="name" class="form-control" id="name"/required>
+</div>
+
+<div class="form-group">
+<label for="username">ID</label>
+<input type="text" name="username" class="form-control" id="username"   required>
+</div>
+
+<div class="form-group">
+<label for="password">Password</label>
+<input type="password" name="password" class="form-control" id="password" required>
+</div>
+
+<div class="form-group">
+<label for="confirmPassword">Confirm Password</label>
+<input type="password" name="confirmPassword" class="form-control" id="confirmPassword" required>
+</div>
+
+<div class="form-group">
+    <label for="username">誕生日</label>
+    <input type="text" name="birthday" class="form-control" id="birthday"   required>
+</div>
+
+<div class="form-group">
+    <label for="username">性別</label>
+    <input type="text" name="gender" class="form-control" id="gender"   required>
+</div>
+
+<div class="form-group">
+    <label for="username">身長</label>
+    <input type="text" name="height" class="form-control" id="height"   required>
+</div>
+
+<div class="form-group">
+    <label for="username">体重</label>
+    <input type="text" name="weight" class="form-control" id="weight"   required>
+</div>
+<div class="form-group">
+    <label for="username">ニックネーム</label>
+    <input type="text" name="nickname" class="form-control" id="nickname"   required>
+</div>
+
+<div class="form-group">
+    <label for="username">コメント</label>
+    <input type="text" name="comment" class="form-control" id="comment"   required>
+</div><button type="submit" class="btn btn-primary">Register</button>
+</form>
+
+</div>
+}
+
+#embed("base2")

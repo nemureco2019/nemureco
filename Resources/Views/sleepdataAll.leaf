@@ -1,0 +1,12 @@
+
+#set("content") {
+<div class="container">
+<h3>全データのCSV生成</h3>
+#embed("dl")
+
+ <a id="download" href="#" download="AllData" onclick="handleDownload()">CSV作成</a>
+
+</div>
+
+}
+#embed("base2")

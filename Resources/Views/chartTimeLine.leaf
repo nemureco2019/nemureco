@@ -1,0 +1,6 @@
+
+{
+timeline: { colorByRowLabel: true }
+};
+chart.draw(dataTable, options);
+}

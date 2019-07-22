@@ -1,0 +1,43 @@
+
+#set("content") {
+
+<div class="container">
+#embed("dl")
+<br>
+<table class="table table-bordered table-hover">
+<thead class="thead-light">
+<tr>
+<th>Name</th>
+<th>UserID</th>
+<th>ニックネーム</th>
+
+
+</tr>
+<tbody>
+  #for(user in user) {
+  <tr>
+  
+<td><a href="/detail/#(user.id)">#(user.name)</a></td>
+<td><a href="/sleepin/#(user.id)">#(user.id)</a></td>
+<td>#(user.nickname)</td>
+
+
+</tr>
+  
+  }
+
+</tbody>
+
+
+
+</thead>
+
+
+</form>
+</table>
+
+
+</div>
+}
+
+#embed("base2")
